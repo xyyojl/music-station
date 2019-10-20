@@ -88,6 +88,8 @@ WSGI_APPLICATION = 'music.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 # 设置数据库连接信息，项目使用的数据库为 music_db
+# import pymysql         # 一定要添加这两行！           
+# pymysql.install_as_MySQLdb()
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
