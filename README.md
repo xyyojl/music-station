@@ -10,4 +10,8 @@
 
 - [Django中Mysql数据库的使用](https://juejin.im/post/5ca38d95e51d4505427f7741 )
 
+- [[Navicat Premium 12安装与激活（亲测已成功激活）](https://www.cnblogs.com/telwanggs/p/11427581.html)
+
+- [Django报错：NoReverseMatch: Reverse for 'xxx' not found . 'xxx' is not a valid view function or pattern](https://blog.csdn.net/qq_37218708/article/details/84489461)
+
   
