@@ -14,4 +14,30 @@
 
 - [Django报错：NoReverseMatch: Reverse for 'xxx' not found . 'xxx' is not a valid view function or pattern](https://blog.csdn.net/qq_37218708/article/details/84489461)
 
-  
+
+
+
+## 出现的错误
+
+### 错误1:
+
+获取不到 css文件，图片文件，报404错误
+
+```html
+{% extends "title_base.html"  %}
+{% block title  %}
+{% load staticfiles %}
+<link type="image/x-icon" rel="shortcut icon" href="{% static "favicon.ico" %}"/>
+<link type="text/css" rel="stylesheet" href="{% static "css/common.css" %}"/>
+<link type="text/css" rel="stylesheet" href="{% static "css/index.css" %}"/>
+```
+
+解决办法：
+
+引入js/css/img等静态文件的时候要在settings.py ，添加下面代码
+
+```py
+# STATICFILES_DIRS用于收集admin的静态资源文件
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
+```
+

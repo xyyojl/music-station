@@ -139,3 +139,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+# STATICFILES_DIRS用于收集admin的静态资源文件
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
