@@ -14,7 +14,7 @@ def searchView(request,page):
             song_info = Song.objects.values('song_id', 'song_name', 'song_singer', 'song_time').filter(Q(song_name__icontains=kword) | Q(song_singer=kword) ).order_by('-song_release').all()
         else:
             song_info = Song.objects.values('song_id', 'song_name', 'song_singer', 'song_time').order_by('-song_release').all()[:50]
-        # 分页功能
+        #分页功能,是django的一个库函数，叫做分页器，设置每一页显示几条数据
         paginator = Paginator(song_info,5)
         try:
             contacts = paginator.page(page)
