@@ -22,7 +22,7 @@
             <div id="suggest" class="search-suggest"></div>
             <div class="search-hot-words">
                 {% for song in search_song %}
-                    <a href="xxx" target="xxx">{{song.song.song_name}}</a>
+                <a target="play" href="{% url 'play' song.song.song_id %}">{{ song.song.song_name }}</a>
                 {% endfor %}
             </div>
         </div>
@@ -49,7 +49,7 @@
                     <div class="songlist__item">
                         <div class="songlist__songname">
                             <span class="songlist__songname_txt">
-                                <a href="xxx" class="js_song" target="play" >{{list.song_name}}</a>
+                                <a href="{% url 'play' list.song_id %}" class="js_song" target="play" >{{list.song_name}}</a>
                             </span>
                         </div>
                         <div class="songlist__artist">
