@@ -22,6 +22,6 @@ urlpatterns = [
     path('search/', include('search.urls')),
     path('ranking.html', include('ranking.urls')),
     path('play/', include('play.urls')),
-    # path('comment/', include('comment.urls')),
-    # path('user/', include('user.urls')),
+    path('comment/', include('comment.urls')),
+    path('user/', include('user.urls')),
 ]

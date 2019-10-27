@@ -14,6 +14,8 @@
 
 - [Django报错：NoReverseMatch: Reverse for 'xxx' not found . 'xxx' is not a valid view function or pattern](https://blog.csdn.net/qq_37218708/article/details/84489461)
 
+- [Django错误：Migration admin.0001_initial is applied before its dependency users.0001_initial on databas](http://www.chenxm.cc/article/587.html)
+
 
 
 

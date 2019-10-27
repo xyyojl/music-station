@@ -107,7 +107,7 @@
                     <div class="product-comment">
                         <div class="links clearfix">
                             <a class="minimum-link-A click_down" href="{% url 'download' song_info.song_id %}">下载</a>
-                            <a class="minimum-link-A" href="xxx">歌曲点评</a>
+                            <a class="minimum-link-A" href="{% url 'comment' song_info.song_id %}">歌曲点评</a>
                         </div>
                         <h3 class="list_title">当前播放列表</h3>
                         <ul class="playing-li" id="songlist">
