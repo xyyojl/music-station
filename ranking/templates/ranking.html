@@ -20,9 +20,9 @@
             </form>
             <div id="suggest" class="search-suggest"></div>
             <div class="search-hot-words">
-                {% for song in search_song %}
-                    <a href="xxx" target="xxx">{{song.song.song_name}}</a>
-                {% endfor %}
+                {% for song in search_song  %}
+                    <a target="play" href="{% url 'play' song.song.song_id %}" >{{ song.song.song_name }}</a>
+                {% endfor  %}
             </div>
         </div>
     </div>
@@ -31,7 +31,7 @@
             <ul class="nav clearfix">
                 <li><a href="/">首页</a></li>
                 <li><a href="{% url 'ranking' %}">歌曲排行</a></li>
-                <li><a href="xxx" target="_blank">用户中心</a></li>
+                <li><a href="{% url 'home' 1 %}" target="_blank">用户中心</a></li>
             </ul>
         </div>
     </div>
@@ -41,13 +41,13 @@
             <!-- 子类分类排行导航 -->
             <div class="side-nav">
                 <div class="nav-head">
-                    <a href="xxx">所有歌曲分类</a>
+                    <a href="{% url 'ranking' %}">所有歌曲分类</a>
                 </div>
                 <ul id="sideNav" class="cate-item">
                     {% for item in All_list  %}
                     <li class="computer">
                         <div class="main-cate">
-                            <a href="xxx"  class="main-title">{{ item.song_type }}</a>
+                            <a href="{% url 'ranking' %}?type={{ item.song_type }}"  class="main-title">{{ item.song_type }}</a>
                         </div>
                     </li>
                     {% endfor  %}
@@ -75,13 +75,13 @@
                     <td><span class="n2">{{forloop.counter}}</span></td>
                     {%endif %}
                     <td>
-                        <a href="xxx"  class="pic" target="play">
+                        <a href="{% url 'play' item.song.song_id %}"  class="pic" target="play">
                             <img src="{% static "songImg/" %}{{ item.song.song_img }}"  width="80" height="80">
                         </a>
                     </td>
                     <td class="name-cell">
                         <h3>
-                            <a href="xxx" target="play" >{{item.song.song_name}}</a>
+                            <a href="{% url 'play' item.song.song_id %}" target="play" >{{item.song.song_name}}</a>
                         </h3>
                         <div class="desc">
                             <a href="javascript:;" target="_blank" class="type" >{{item.song.song_singer}}</a>
