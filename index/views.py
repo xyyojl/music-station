@@ -22,3 +22,7 @@ def indexView(request):
     #render()结合一个给定的模板和一个给定的上下文字典, 并返回一个渲染后的HttpResponse对象。
     #locals()用法：locals()可以直接将函数中所有的变量全部传给模板
     return render(request,'index.html',locals())
+
+# 自定义404和500的错误页面
+def page_not_found(request):
+    return render(request, 'error404.html', status=404)
