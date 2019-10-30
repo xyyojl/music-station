@@ -27,6 +27,6 @@ urlpatterns = [
 ]
 
 # 设置404、500错误状态码
-from index import views
+""" from index import views
 handler404 = views.page_not_found
-handler500 = views.page_not_found
+handler500 = views.page_not_found """

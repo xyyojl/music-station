@@ -24,5 +24,5 @@ def indexView(request):
     return render(request,'index.html',locals())
 
 # 自定义404和500的错误页面
-def page_not_found(request):
-    return render(request, 'error404.html', status=404)
+""" def page_not_found(request):
+    return render(request, 'error404.html', status=404) """
