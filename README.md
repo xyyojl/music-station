@@ -1,6 +1,6 @@
 ## 在本地运行项目
 
-注：建议提前看一下[django2.2连接mysql遇到的坑](https://www.cnblogs.com/hanwenlin/p/10677026.html)
+注：保存虚拟环境的文件夹跟项目文件夹**最好放在同一个目录下**。
 
 1、克隆项目到本地
 
@@ -19,31 +19,35 @@ pip install virtualenv
 # 创建虚拟环境 virtualenv [虚拟环境名称] 
 virtualenv music
 
-#如果不想使用系统的包,加上–no-site-packeages参数
-virtualenv  --no-site-packages 创建路径名
+# 如果不想使用系统的包,加上–no-site-packeages参数
+# virtualenv  --no-site-packages 创建路径名
+virtualenv  --no-site-packages music
 ```
 
 3、激活虚拟环境
 
-安装在命令行进入到保存虚拟环境的文件夹，输入如下命令激活虚拟环境：
+安装在命令行进入到**保存虚拟环境的文件夹**，输入如下命令激活虚拟环境：
 
 ```python
+# 进入保存虚拟环境的文件夹
 cd music
+# 激活虚拟环境
 .\Scripts\activate
 ```
 
-4、退出环境，**需要退出虚拟环境，输入下面命令即可**
+4、**如果需要退出虚拟环境，输入下面命令即可**
 
 ```python
+# 退出环境
 .\Scripts\deactivate
 ```
 
 5、安装项目依赖
 
-如果使用了虚拟环境，确保激活并进入了虚拟环境，在命令行进入项目所在的 music-station 文件夹，运行如下命令
+如果使用了虚拟环境，确保激活并进入了虚拟环境，在命令行**进入项目所在的 music-station 文件夹**，运行如下命令
 
 ```
-pip install -r requirements.txt
+pip install -r requirments.txt
 ```
 
 6、使用 Navicat Premium 创建数据库
@@ -60,7 +64,14 @@ python manage.py migrate
 
 8、借助 Navicat Premium 工具，将 data文件夹中的 excel 数据导入数据库对应的数据表里面，而不用自己输入数据。
 
-9、创建后台管理员账户
+向数据库导入 excel 数据的顺序：
+
+- index_label.xls
+- index_song.xls
+- index_dynamic.xls
+- index_comment.xls
+
+9、创建后台管理员账户，注：管理员的密码有要求的，不符合就不能成功创建后台管理员。
 
 ```python
 python manage.py createsuperuser
@@ -68,35 +79,28 @@ python manage.py createsuperuser
 
 10、启动项目
 
-在上一步所在的位置运行如下命令开启开发服务器
+在上一步所在的位置运行如下命令开启开发服务器，然后就可以打开浏览器，输入 http://127.0.0.1:8000/
 
 ```python
 python manage.py runserver
 ```
 
+11、进入后台增删查改数据
 
-
-
+在浏览器输入：127.0.0.1:8000/admin，使用第 9 步创建的后台管理员账户登录
 
 ## 解决问题的资料
 
-- [django2.2版本中pymysql报错'mysqlclient 1.3.13 or newer is required'](https://blog.csdn.net/lijing742180/article/details/91966031 )
-
 - [django2.2连接mysql遇到的坑](https://www.cnblogs.com/hanwenlin/p/10677026.html)
-
+- [django 2.0（一） 安装与连接MySQL](https://www.jianshu.com/p/1ea594584df6)
+- [django2.2版本中pymysql报错'mysqlclient 1.3.13 or newer is required'](https://blog.csdn.net/lijing742180/article/details/91966031 )
+- [django2.2连接mysql遇到的坑](https://www.cnblogs.com/hanwenlin/p/10677026.html)
 - [win10安装MYSQL5.7](https://www.jianshu.com/p/c78272a2ca4d )
-
 - [Navicat Premium 12.1.20.0安装与激活](https://www.jianshu.com/p/5f693b4c9468 )
-
 - [Django中Mysql数据库的使用](https://juejin.im/post/5ca38d95e51d4505427f7741 )
-
 - [[Navicat Premium 12安装与激活（亲测已成功激活）](https://www.cnblogs.com/telwanggs/p/11427581.html)
-
 - [Django报错：NoReverseMatch: Reverse for 'xxx' not found . 'xxx' is not a valid view function or pattern](https://blog.csdn.net/qq_37218708/article/details/84489461)
-
 - [Django错误：Migration admin.0001_initial is applied before its dependency users.0001_initial on databas](http://www.chenxm.cc/article/587.html)
-
-- [开心愉快的使用Navicat Premium，你懂的](https://blog.wxlost.com/navicat_crack.html)
 
 
 
