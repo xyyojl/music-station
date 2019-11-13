@@ -96,6 +96,8 @@ python manage.py runserver
 
 - [Django错误：Migration admin.0001_initial is applied before its dependency users.0001_initial on databas](http://www.chenxm.cc/article/587.html)
 
+- [开心愉快的使用Navicat Premium，你懂的](https://blog.wxlost.com/navicat_crack.html)
+
 
 
 
