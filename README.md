@@ -47,7 +47,7 @@ cd music
 如果使用了虚拟环境，确保激活并进入了虚拟环境，在命令行**进入项目所在的 music-station 文件夹**，运行如下命令
 
 ```
-pip install -r requirments.txt
+pip install -r requirements.txt
 ```
 
 6、使用 Navicat Premium 创建数据库
